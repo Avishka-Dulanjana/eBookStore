@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 
-import booksRoute from './routes/books_route';
+import booksRoute from "./routes/books_route.js";
 
 const app = express();
 
@@ -25,7 +25,6 @@ const connection = () => {
       console.log("Database connection failed..!" + e);
     });
 };
-
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
